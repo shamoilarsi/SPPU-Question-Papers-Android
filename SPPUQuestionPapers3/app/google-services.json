@@ -1,0 +1,65 @@
+{
+  "project_info": {
+    "project_number": "258276760026",
+    "firebase_url": "https://sppuquestionpapers.firebaseio.com",
+    "project_id": "sppuquestionpapers",
+    "storage_bucket": "sppuquestionpapers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258276760026:android:6e2b16e38d2af7c4",
+        "android_client_info": {
+          "package_name": "com.arsiwala.shamoil.sppuquestionpapers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258276760026-140tlrksjrnekcv6uj26qurt1nh1at6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arsiwala.shamoil.sppuquestionpapers",
+            "certificate_hash": "bebd111fcc3907decddcf5df93709b37828eb5e6"
+          }
+        },
+        {
+          "client_id": "258276760026-6abqc4oiamml37bt9kuo4iso254v52jc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arsiwala.shamoil.sppuquestionpapers",
+            "certificate_hash": "1f92ecd6b4057d54c72b784450685d4580da0879"
+          }
+        },
+        {
+          "client_id": "258276760026-jj5pv3jt94vvs5qu1cill71b653pldtb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arsiwala.shamoil.sppuquestionpapers",
+            "certificate_hash": "8c3fa2d35738e0d8793855590cd588d890fb44cd"
+          }
+        },
+        {
+          "client_id": "258276760026-40vpmqbgjjai6k7qpmj525g02i2cogff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJTLXfP11IVLa-M-W1uaeMBufhC6pVnu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258276760026-40vpmqbgjjai6k7qpmj525g02i2cogff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4429552861546129~3370597201"
+    }
+  ],
+  "configuration_version": "1"
+}

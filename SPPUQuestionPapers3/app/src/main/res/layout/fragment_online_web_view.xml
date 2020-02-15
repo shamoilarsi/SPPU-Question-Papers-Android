@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arsiwala.shamoil.sppuquestionpapers.onlineWebView">
+
+    <WebView
+        android:id="@+id/id_onlineWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pb">
+
+    </WebView>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/progressbar_states"
+        android:visibility="visible" />
+
+</RelativeLayout>

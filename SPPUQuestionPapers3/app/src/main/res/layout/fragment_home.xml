@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/firstpage_logo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/app_logo"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/firstpage_welcometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/firstpage_logo"
+            android:text="Welcome to SPPU Question Papers"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/firstpage_text2"
+            android:layout_below="@id/firstpage_welcometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/firstpage_getstarted_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_layout"
+            android:layout_below="@id/firstpage_text2"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Let's Begin!" />
+    </RelativeLayout>
+</RelativeLayout>

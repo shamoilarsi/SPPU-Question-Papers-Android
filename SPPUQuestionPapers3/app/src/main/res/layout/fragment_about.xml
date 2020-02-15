@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.arsiwala.shamoil.sppuquestionpapers.about">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/app_logo"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_below="@id/card1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/list_view_background">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/mail_clipart" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/list_view_background">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:contentDescription="Insta_icon"
+                android:src="@drawable/insta_logo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginBottom="20sp"
+        android:gravity="center"
+        android:text="SPPU Engineering Question Papers"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic|bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_appname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/list_view_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8sp"
+            android:paddingBottom="8sp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/devName"
+                android:layout_toLeftOf="@+id/devName"
+                android:src="@drawable/nav_icon_about" />
+
+            <TextView
+                android:id="@+id/devName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="   Shamoil Arsiwala"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

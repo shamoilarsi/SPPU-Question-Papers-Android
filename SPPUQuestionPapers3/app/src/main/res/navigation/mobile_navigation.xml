@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.home"
+        android:label="SPPU Question Papers"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/list_of_subjects"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.list_of_subjects"
+        tools:layout="@layout/fragment_list_of_subjects" >
+        <action
+            android:id="@+id/action_list_of_subjects_to_onlineWebView"
+            app:destination="@id/onlineWebView" />
+        <argument
+            android:name="branch_name"
+            app:argType="string"
+            android:defaultValue="def" />
+        <argument
+            android:name="year_name"
+            app:argType="string"
+            android:defaultValue="def" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineWebView"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.onlineWebView"
+        tools:layout="@layout/fragment_online_web_view" >
+        <argument
+            android:name="subject_name"
+            app:argType="string" />
+        <argument
+            android:name="subject_link"
+            app:argType="string" />
+        <argument
+            android:name="isSyllabus"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloaded_papers"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.downloaded_papers"
+        tools:layout="@layout/fragment_downloaded_papers" >
+        <action
+            android:id="@+id/action_downloaded_papers_to_pdf_viewer"
+            app:destination="@id/pdf_viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdf_viewer"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer" >
+        <argument
+            android:name="file_path"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.arsiwala.shamoil.sppuquestionpapers.about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

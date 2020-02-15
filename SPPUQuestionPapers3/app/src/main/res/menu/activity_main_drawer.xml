@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Engineering">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/id_FE"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="First Year" />
+
+                <item
+                    android:id="@+id/id_Computer"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Computers" />
+
+                <item
+                    android:id="@+id/id_IT"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="IT" />
+
+                <item
+                    android:id="@+id/id_ENTC"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="ENTC" />
+
+                <item
+                    android:id="@+id/id_Civil"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Civil" />
+
+                <item
+                    android:id="@+id/id_Mechanical"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Mechanical" />
+
+                <item
+                    android:id="@+id/id_Electrical"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Electrical"/>
+
+                <item
+                    android:id="@+id/id_INC"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Instrumentation &amp; Control"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="More">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/id_Downloads"
+                    android:icon="@drawable/download_clipart"
+                    android:title="Downloads"/>
+
+                <item
+                    android:id="@+id/id_Syllabus"
+                    android:icon="@drawable/nav_icon_book"
+                    android:title="Syllabus"/>
+
+                <item
+                    android:id="@+id/id_Timetable"
+                    android:icon="@drawable/timetable_icon"
+                    android:title="Time Table"/>
+
+                <!--                <item-->
+                <!--                    android:id="@+id/id_Programs"-->
+                <!--                    android:icon="@drawable/code_clipart"-->
+                <!--                    android:title="Programs"/>-->
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Links">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/id_result"
+                    android:icon="@drawable/nav_icon_website"
+                    android:title="Online Result"/>
+                <item
+                    android:id="@+id/id_reval"
+                    android:icon="@drawable/nav_icon_website"
+                    android:title="Photocopy/Revaluation"/>
+                <item
+                    android:id="@+id/id_revalresult"
+                    android:icon="@drawable/nav_icon_website"
+                    android:title="Revaluation Result"/>
+            </group>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Extras">
+        <menu>
+            <item
+                android:id="@+id/id_help"
+                android:icon="@drawable/nav_icon_info"
+                android:title="Help" />
+            <item
+                android:id="@+id/id_about"
+                android:icon="@drawable/nav_icon_about"
+                android:title="About" />
+            <item
+                android:title="Share"
+                android:icon="@drawable/nav_icon_share"
+                android:id="@+id/id_share"/>
+            <item
+                android:id="@+id/id_oab"
+                android:icon="@drawable/nav_icon_otherapps"
+                android:title="More Apps"/>
+        </menu>
+    </item>
+</menu>
