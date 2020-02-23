@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     String TAG = "SQP_LOGS_MainActivity", syllabus_name = "", branch_name, year_name;
     ProgressDialog progessDialog_for_downloading_database;
     NavController navController;
-    FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+    FirebaseFirestore firebaseFirestore;
 
     // FOR OP2 : 87AE4EBEC30DE492057F7A76C6AB89DE
     // FOR OP6 : FB868D2E89162749B361D2FC8C0E7B73
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        firebaseFirestore = FirebaseFirestore.getInstance();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout);
