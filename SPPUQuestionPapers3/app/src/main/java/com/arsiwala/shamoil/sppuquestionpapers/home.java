@@ -23,7 +23,6 @@ public class home extends Fragment {
           "new window\". Allow the page to load.\n\n" +
           "3. Enter desired name for the paper and click on the " +
           "desired option.\n\n" +
-          "\n" +
           "----------\n" +
           "\n" +
           "--> To find the downloaded papers, slide the menu from " +

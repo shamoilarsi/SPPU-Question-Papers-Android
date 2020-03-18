@@ -12,6 +12,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -685,5 +686,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void setActionBarTitle(String title) {
         Objects.requireNonNull(getSupportActionBar()).setTitle(title);
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newconfig){
+        super.onConfigurationChanged(newconfig);
     }
 }
