@@ -23,7 +23,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.SslErrorHandler;
-import android.webkit.WebBackForwardList;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -245,7 +244,7 @@ public class onlineWebView extends Fragment implements RewardedVideoAdListener {
                 bool_setDesktopView = dataSnapshot.getValue(Boolean.class);
                 Log.i(TAG, "setDesktopView got value " + bool_setDesktopView);
                 if(bool_setDesktopView)
-                    setDesktopMode(webView, bool_setDesktopView);
+                    setDesktopMode(webView, true);
             }
 
             @Override
@@ -331,9 +330,9 @@ public class onlineWebView extends Fragment implements RewardedVideoAdListener {
     private void downloadAndShareAlert(final String url) {
 //        final Uri my_uri = Uri.parse(url);
         splitLink = url.split("/");
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Objects.requireNonNull(getContext()));
         LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.edittext_alertdialog_layout, null);
+        @SuppressLint("InflateParams") final View dialogView = inflater.inflate(R.layout.edittext_alertdialog_layout, null);
         dialogBuilder.setView(dialogView);
 
         editText = dialogView.findViewById(R.id.id_file_name);

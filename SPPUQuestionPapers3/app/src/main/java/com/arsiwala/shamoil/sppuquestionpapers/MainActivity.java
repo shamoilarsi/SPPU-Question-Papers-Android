@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         branch_name = sharedPreferences.getString("branch_name", "");
         year_name = sharedPreferences.getString("year_name", "");
         database_downloaded = sharedPreferences.getBoolean("database_downloaded", false);
-        showTimetable = sharedPreferences.getBoolean("showTimetable", false);
+        showTimetable = sharedPreferences.getBoolean("showTimetable", true);
 
         sharedPreferences.edit().putInt("app_launch_count", ++app_launch_count).apply();
         Log.i(TAG, "App Launch Count : " + app_launch_count);
@@ -199,7 +199,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (isStoragePermissionGranted()) {
             File rootPath = new File(Environment.getDataDirectory(), "/data/" + getPackageName() + "/databases/");
-            if (!rootPath.exists()) rootPath.mkdirs();
+            if (!rootPath.exists()) //noinspection ResultOfMethodCallIgnored
+                rootPath.mkdirs();
 
             final File localFile = new File(rootPath, "SPPU_QP.db");
 
@@ -502,6 +503,7 @@ public class MainActivity extends AppCompatActivity {
             appVersionReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    //noinspection ConstantConditions
                     cloud_app_version = dataSnapshot.getValue(Float.class);
                     Log.d(TAG, "Cloud Version = " + cloud_app_version + ", My Version = " + my_app_version);
                     if (cloud_app_version - my_app_version > 0.02) {

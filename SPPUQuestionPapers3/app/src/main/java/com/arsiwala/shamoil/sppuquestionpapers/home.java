@@ -1,6 +1,7 @@
 package com.arsiwala.shamoil.sppuquestionpapers;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,15 +17,13 @@ import androidx.fragment.app.Fragment;
 import java.util.Objects;
 
 public class home extends Fragment {
-  String TAG = "SQP_LOGS_home";
   String help_message = "To Download or Share a paper:-\n\n" +
           "1.Open the paper you wish to download/share.\n\n" +
           "2. Click on the 3 dots on top right corner, Click on \"Open in " +
           "new window\". Allow the page to load.\n\n" +
           "3. Enter desired name for the paper and click on the " +
           "desired option.\n\n" +
-          "----------\n" +
-          "\n" +
+          "----------\n\n" +
           "--> To find the downloaded papers, slide the menu from " +
           "the left side. Click on \"Downloads\".\n\n" +
           "--> If you have an ad blocker installed, you cannot " +
@@ -38,12 +37,14 @@ public class home extends Fragment {
   }
 
 
+  @SuppressLint("SetTextI18n")
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
     Objects.requireNonNull(((AppCompatActivity) Objects.requireNonNull(getActivity())).getSupportActionBar()).show();
     Objects.requireNonNull(getActivity()).setTitle("SPPU Question Papers");
+    String TAG = "SQP_LOGS_home";
     Log.d(TAG, "Home Page launched");
 
     TextView textView = rootView.findViewById(R.id.firstpage_text2);

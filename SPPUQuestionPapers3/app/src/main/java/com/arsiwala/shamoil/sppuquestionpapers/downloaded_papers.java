@@ -73,10 +73,28 @@ public class downloaded_papers extends Fragment {
                 new AlertDialog.Builder(Objects.requireNonNull(getContext()))
                         .setCancelable(true)
                         .setTitle(file_names[i])
-                        .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                        .setNeutralButton("Export", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
+                                FirebaseFirestore.getInstance().collection("Counter").document("Others")
+                                        .update("Export", FieldValue.increment(1));
+                                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + getString(R.string.app_name) + "/" + file_names[i] + ".pdf");
+
+                                File directory = new File(Environment.getExternalStorageDirectory() + "/" + getString(R.string.app_name));
+                                if(!directory.exists()) //noinspection ResultOfMethodCallIgnored
+                                    directory.mkdirs();
+                                int c = 0;
+                                while(file.exists() && !file.isDirectory())
+                                    file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + getString(R.string.app_name) + "/" + file_names[i] + "-" + ++c + ".pdf");
+                                if(file_list[i].renameTo(file)) {
+                                    Toast.makeText(getContext(), "Exported to : " + file.getAbsolutePath(), Toast.LENGTH_LONG).show();
+                                    Log.i(TAG, "Exported to : " + file.getAbsolutePath());
+                                }
+                                else {
+                                    Toast.makeText(getContext(), "Export failed", Toast.LENGTH_LONG).show();
+                                    Log.e(TAG, "Export Failed");
+                                }
+                                load_listview();
                             }
                         })
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
@@ -137,6 +155,7 @@ public class downloaded_papers extends Fragment {
     }
 
     private void load_listview(){
+        Log.d(TAG, "load_listview: called");
         filePath = new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/com.arsiwala.shamoil.sppuquestionpapers/files/downloaded_papers/");
         file_list = filePath.listFiles();
 
