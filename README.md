@@ -59,6 +59,6 @@ Building an app used by over 130,000 students meant designing for high-concurren
 For recruiters, engineering teams, or legacy users looking to run the live application asset:
 
 1. Navigate to the **[Releases](../../releases)** tab of this repository.
-2. Download the production-compiled binary: `sppu-papers-production.apk`.
+2. Download the production-compiled binary: `SPPU-Question-Papers-v3.3.apk`.
 3. Enable "Install Unknown Apps" (Sideloading) within your Android device's developer or security settings.
 4. Transfer, install, and launch the application.
